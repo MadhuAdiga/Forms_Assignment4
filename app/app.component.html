@@ -13,8 +13,8 @@
       </div>
     </div>
 
-    <div *ngIf="(myForm.nameRef | lowercase )=='avnesh'" class="panel panel-heading panel-success" style="background-color:yellowgreen"><b>Welcome back Avnesh!!</b></div><!-- Create a division to display greeting msg if user is Avnesh-->
-    <div *ngIf="(myForm.nameRef | lowercase )!=='avnesh'" class="panel panel-heading panel-success" style="background-color:yellowgreen"><b>Hey. Thanks!!</b></div><!-- Create a division to display greeting msg if user is not Avnesh-->
+    <div *ngIf="(myForm.nameRef | lowercase )=='avnesh' && nameRef.touched && nameRef.dirty" class="panel panel-heading panel-success" style="background-color:yellowgreen"><b>Welcome back Avnesh!!</b></div><!-- Create a division to display greeting msg if user is Avnesh-->
+    <div *ngIf="(myForm.nameRef | lowercase )!=='avnesh' && nameRef.touched && nameRef.dirty" class="panel panel-heading panel-success" style="background-color:yellowgreen"><b>Hey. Thanks!!</b></div><!-- Create a division to display greeting msg if user is not Avnesh-->
 
     <div class="form-group"><!-- Create a form group  -->
       <label>User Name</label>
